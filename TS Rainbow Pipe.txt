@@ -1,0 +1,37 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "Rainbow Pipe Made By Wxste";
+Text = "Enabled!";
+Duration = 6
+})
+local Pipe = game.Players.LocalPlayer.Backpack:FindFirstChild("Pipe")
+con = game:GetService("RunService").RenderStepped:Connect(function()
+if Pipe then
+for i,v in pairs (Pipe:GetChildren()) do
+if v.Name == "Handle" then
+v.UsePartColor = true 
+wait()
+v.Material = "Neon"
+v.Color = Color3.fromRGB(255,0,0)
+wait(0.1) 
+v.Color = Color3.fromRGB(255,255,0)
+wait(0.1)    
+v.Color = Color3.fromRGB(79, 255, 243)
+wait(0.1) 
+v.Color = Color3.fromRGB(21, 255, 0)
+wait(0.1) 
+v.Color = Color3.fromRGB(0, 255, 234)
+wait(0.1) 
+v.Color = Color3.fromRGB(0, 3, 255)
+wait(0.1) 
+v.Color = Color3.fromRGB(209, 0, 255)
+wait(0.1) 
+v.Color = Color3.fromRGB(130, 16, 111)
+wait(0.1) 
+v.Color = Color3.fromRGB(255, 112, 0)
+wait(0.1) 
+v.Color = Color3.fromRGB(47, 164, 15)
+v.Transparency = 0.8
+end
+end
+end
+end)

@@ -1,0 +1,9 @@
+local uis = game:GetService("UserInputService")
+local i = Instance.new("BoolValue",game.ServerStorage)
+uis.InputBegan:Connect(function(x,player)
+    if player then return end
+if x.KeyCode == Enum.KeyCode.R then
+               game.Players.LocalPlayer.Character.Humanoid.Health = 0
+                   Health = 0
+end
+end)
